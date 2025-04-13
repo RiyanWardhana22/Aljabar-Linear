@@ -24,17 +24,7 @@ matrix_data = [
 ]
 
 matrix = np.array(matrix_data, dtype=float)
-
 eigenvalues, eigenvectors = eig(matrix)
-
-print("Nilai Eigen:")
-for i, val in enumerate(eigenvalues):
-    print(f"λ{i+1}: {val:.4f}")
-
-print("\nVektor Eigen (setiap kolom adalah vektor eigen):")
-for i in range(eigenvectors.shape[1]):
-    print(f"\nVektor eigen untuk λ{i+1}:")
-    print(eigenvectors[:, i])
 
 print("\nRingkasan Nilai Eigen dan Vektor Eigen:")
 for i in range(len(eigenvalues)):
