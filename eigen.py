@@ -24,12 +24,12 @@ matrix_data = [
 ]
 
 matrix = np.array(matrix_data, dtype=float)
-eigenvalues, eigenvectors = eig(matrix)
+nilaiEigen, vektorEigen = eig(matrix)
 
 print("\nRingkasan Nilai Eigen dan Vektor Eigen:")
-for i in range(len(eigenvalues)):
-    print(f"\nNilai Eigen {i+1}: {eigenvalues[i]:.4f}")
+for i in range(len(nilaiEigen)):
+    print(f"\nNilai Eigen {i+1}: {nilaiEigen[i]:.4f}")
     print("Bagian Real Vektor Eigen:")
-    print(np.real(eigenvectors[:, i]))
+    print(np.real(vektorEigen[:, i]))
     print("Bagian Imajiner Vektor Eigen:")
-    print(np.imag(eigenvectors[:, i]))
+    print(np.imag(vektorEigen[:, i]))
